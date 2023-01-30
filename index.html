@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="" class="logo">Logo</a>
+      <div class="right-side">
+        <div class="btns dayNight">
+          <!-- import moon icon  -->
+          <ion-icon name="moon-outline"></ion-icon>
+          <!-- import sunny icon  -->
+          <ion-icon name="sunny-outline"></ion-icon>
+        </div>
+        <div class="btns menuToggle">
+          <!-- import menu icon  -->
+          <ion-icon name="menu-outline"></ion-icon>
+          <!-- import close icon  -->
+          <ion-icon name="close-outline"></ion-icon>
+        </div>
+      </div>
+    </header>
+    <section class="main">
+      <video src="./video/IMG_6699.mp4" autoplay loop muted type="mp4"></video>
+      <img src="./imgs/IMG_6700.JPG" alt="" class="mask" />
+      <h2>Ocean</h2>
+    </section>
+
+    <!-- Side Bar Navigation  -->
+    <ul class="navigation">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Package</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      let dayNight = document.querySelector(".dayNight");
+      let menuToggle = document.querySelector(".menuToggle");
+      let body = document.querySelector("body");
+      let navigation = document.querySelector(".navigation");
+
+      dayNight.onclick = function() {
+        body.classList.toggle("dark");
+        dayNight.classList.toggle("active");
+      };
+      menuToggle.onclick = function() {
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>
